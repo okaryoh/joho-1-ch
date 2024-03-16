@@ -26,7 +26,7 @@ export const Label = ({
   backgroundColor,
   color = '#000000',
   borderRadius,
-  fontSizePx = 15,
+  fontSizePx = 18,
   label
 }: LabelProps) => {
   return (
