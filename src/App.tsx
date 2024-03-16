@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import './style.css';
+import { Paragraph } from './stories/Paragraph/Paragraph';
+import { Label } from './stories/Label/Label';
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "20px" }}>
+      <Paragraph text={"情報いっちゃんねる"} fontSizePx={40} />
+      <Paragraph text={"便利ツール"} backgroundColor='#f0f0f0' />
+      <Label label={"Comming Soon..."} />
+      <Paragraph text={"授業資料"} backgroundColor='#f0f0f0' />
+      <Label label={"Comming Soon..."} />
+      <Paragraph text={"各種リンク"} backgroundColor='#f0f0f0' />
+      <Label label={"Comming Soon..."} />
     </div>
   );
 }
