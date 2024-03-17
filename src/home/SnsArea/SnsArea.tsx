@@ -28,12 +28,12 @@ export const SnsArea = ({ }: SnsAreaProps) => {
   return (
     <div style={{
       marginLeft: '10px',
+      padding: '10px',
       width: '30%',
       minHeight: 300,
       // ココナラの大きさ
       minWidth: 320,
       backgroundColor: '#7CD1C2',
-      overflow: 'scroll'
     }}>
       <Paragraph text="YouTubeで解説動画上げてます！" backgroundColor='#f0f0f0' />
       <iframe src="https://www.youtube.com/embed/B4oW_ZhhrqI?si=6drIB7t_wuRYddxL" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
