@@ -13,10 +13,6 @@ function App() {
       <header style={{ fontSize: '40px' }}>
         情報いっちゃんねる
       </header>
-      <Paragraph text={"授業資料"} backgroundColor='#f0f0f0' />
-      <Label label={"Comming Soon..."} />
-      <Paragraph text={"各種リンク"} backgroundColor='#f0f0f0' />
-      <Label label={"Comming Soon..."} />
       <div className="main">
         <div style={{
           display: 'flex',
@@ -34,6 +30,7 @@ function App() {
             border: '1px solid #000'
           }}>
             {/* mainカラム 右側 */}
+            <SnsArea />
           </div>
         </div>
       </div>
