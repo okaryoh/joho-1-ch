@@ -18,7 +18,15 @@ export const SnsArea = ({ }: SnsAreaProps) => {
   // ココナラのスクリプトを埋め込む
 
   return (
-    <>
+    <div style={{
+      marginLeft: '10px',
+      width: '30%',
+      minHeight: 300,
+      // ココナラの大きさ
+      minWidth: 320,
+      backgroundColor: '#7CD1C2',
+      overflow: 'scroll'
+    }}>
       <Paragraph text="YouTubeで解説動画上げてます！" backgroundColor='#f0f0f0' />
       <Paragraph text="X(旧Twitter)やってます！" backgroundColor='#f0f0f0' />
       <div>
@@ -31,6 +39,6 @@ export const SnsArea = ({ }: SnsAreaProps) => {
           基本情報技術者・ITパスポートの試験対策をします なぜ？をしっかりと説明し、楽しんでもらえるよう指導します！
         </a>
       </div>
-    </>
+    </div>
   );
 };

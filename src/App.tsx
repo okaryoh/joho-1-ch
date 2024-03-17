@@ -25,16 +25,8 @@ function App() {
             <ToolsArea />
             <ClassArea />
           </div>
-          <div style={{
-            marginLeft: '10px',
-            width: '25%',
-            minHeight: 300,
-            minWidth: 300,
-            border: '1px solid #000'
-          }}>
-            {/* mainカラム 右側 */}
-            <SnsArea />
-          </div>
+          {/* mainカラム 右側 */}
+          <SnsArea />
         </div>
       </div>
     </div>
