@@ -39,3 +39,27 @@ export const Link: Story = {
     linkUrl: 'https://google.com/'
   },
 };
+
+export const small: Story = {
+  args: {
+    title: 'タイトルタイトルタイトルタイトルタイトルタイトルタイトル',
+    detail: 'ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。',
+    thumbnailSize: 'small',
+  },
+};
+
+export const large: Story = {
+  args: {
+    title: 'タイトルタイトルタイトルタイトルタイトルタイトルタイトル',
+    detail: 'ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。',
+    thumbnailSize: 'large',
+  },
+};
+
+export const noImage: Story = {
+  args: {
+    title: '画像なしタイトル',
+    detail: '説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明',
+    isImage: false,
+  }
+}
