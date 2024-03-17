@@ -27,6 +27,7 @@ function App() {
           }}>
             {/* mainカラム 左側 */}
             <ToolsArea />
+            <ClassArea />
           </div>
           <div style={{
             width: '30%',
