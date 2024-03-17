@@ -25,8 +25,8 @@ export const SnsArea = ({ }: SnsAreaProps) => {
         <a className="twitter-timeline" data-lang="ja" data-width="220" data-height="400" href="https://twitter.com/tohoku_joho_1ch?ref_src=twsrc%5Etfw">Tweets by tohoku_joho_1ch</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
       <iframe src="https://www.youtube.com/embed/B4oW_ZhhrqI?si=6drIB7t_wuRYddxL" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
-      <Paragraph text="ココナラでマンツーマン指導やってます！" backgroundColor='#f0f0f0' />
       <div id="coconala">
+        <Paragraph text="ココナラでマンツーマン指導やってます！" backgroundColor='#f0f0f0' />
         <a className="coconala-widget" href="https://coconala.com/services/3051246" data-service_id="3051246" data-width="468" data-comment="1" data-invite="1" data-user_id="3877173">
           基本情報技術者・ITパスポートの試験対策をします なぜ？をしっかりと説明し、楽しんでもらえるよう指導します！
         </a>
