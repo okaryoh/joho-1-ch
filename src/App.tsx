@@ -26,7 +26,10 @@ function App() {
             <ClassArea />
           </div>
           <div style={{
-            width: '30%',
+            marginLeft: '10px',
+            width: '25%',
+            minHeight: 300,
+            minWidth: 300,
             border: '1px solid #000'
           }}>
             {/* mainカラム 右側 */}
