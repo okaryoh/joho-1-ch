@@ -6,13 +6,13 @@ export interface SnsAreaProps {
 
 export const SnsArea = ({ }: SnsAreaProps) => {
   // ココナラのスクリプトを埋め込む https://begien.com/article/58/view
-  const script = document.createElement('script');
-  script.innerHTML = `!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://coconala.com/js/coconala_widget.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'coconala-wjs');`;
+  const coconalaScript = document.createElement('script');
+  coconalaScript.innerHTML = `!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://coconala.com/js/coconala_widget.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'coconala-wjs');`;
 
   useEffect(() => {
-    if (script !== null) {
+    if (coconalaScript !== null) {
       const coconalaEle = document.getElementById("coconala");
-      coconalaEle?.appendChild(script);
+      coconalaEle?.appendChild(coconalaScript);
     }
   })
   // ココナラのスクリプトを埋め込む
