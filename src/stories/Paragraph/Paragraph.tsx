@@ -39,7 +39,6 @@ export const Paragraph = ({
         padding: '5px',
         margin: '5px',
         fontSize: `${fontSizePx}px`,
-        width: "100%"
       }}
     >
       {text}
