@@ -20,10 +20,10 @@ export const SnsArea = ({ }: SnsAreaProps) => {
   return (
     <>
       <Paragraph text="YouTubeで解説動画上げてます！" backgroundColor='#f0f0f0' />
-      <iframe src="https://www.youtube.com/embed/?list=UUbxZSMpS1NYU75M6mav94Dg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <Paragraph text="X(旧Twitter)やってます！" backgroundColor='#f0f0f0' />
       <div>
         <a className="twitter-timeline" data-lang="ja" data-width="220" data-height="400" href="https://twitter.com/tohoku_joho_1ch?ref_src=twsrc%5Etfw">Tweets by tohoku_joho_1ch</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+      <iframe src="https://www.youtube.com/embed/B4oW_ZhhrqI?si=6drIB7t_wuRYddxL" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
       <Paragraph text="ココナラでマンツーマン指導やってます！" backgroundColor='#f0f0f0' />
       <div id="coconala">
