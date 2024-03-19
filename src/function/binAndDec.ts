@@ -9,11 +9,19 @@ export function dec2bin(dec: number): number {
     let times = 0;
     let decimalBin = '';
 
-    while (decimal != 0 || times <= 10) {
+    while (decimal != 0) {
         if (times === 0) {
             decimalBin += ".";
         }
-        console.log(`${decimal}`);
+
+        if (times === 10) {
+            /** 
+             * 循環小数は小数点10桁で止める。最後の桁が0だと、それ以降の数字も0で省略されてしまうので最後の桁は1にする。
+             * (1.0010100100 は、 1.00101001 となってしまう。) 
+             */
+            decimalBin += "1"
+            break;
+        }
         decimal = decimal * 2;
         decimalBin += Math.floor(decimal);
         decimal = decimal - Math.floor(decimal)
