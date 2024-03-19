@@ -4,7 +4,7 @@ import { ToolsArea } from './home/ToolsArea/ToolsArea';
 import { ClassArea } from './home/ClassArea/ClassArea';
 import { Home } from './home/Home';
 import { Router, Routes, Route, BrowserRouter } from 'react-router-dom';
-import FloatingPointApp from './Page/FloatingPointApp';
+import FloatingPointApp from './Page/Tools/FloatingPointApp/FloatingPointApp';
 import NotFoundApp from './Page/NotFoundApp';
 
 function App() {
