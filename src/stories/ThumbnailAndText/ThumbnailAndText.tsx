@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface ThumbnailAndTextProps {
   /**
    * サムネイル
@@ -76,7 +78,7 @@ export const ThumbnailAndText = ({
         padding: '5px 3px',
       }}>
         {linkUrl
-          ? <a href={linkUrl}>{title}</a>
+          ? <Link to={linkUrl}>{title}</Link>
           : <a>{title}</a>}
       </div>
       <div style={{

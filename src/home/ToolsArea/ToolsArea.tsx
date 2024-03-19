@@ -15,6 +15,7 @@ export const ToolsArea = ({ }: ToolsAreaProps) => {
           title='浮動小数点の計算'
           thumbnailSize='small'
           isImage={false}
+          linkUrl="/floatingpoint"
         />
         <ThumbnailAndText
           title='2進数の計算'
