@@ -1,23 +1,22 @@
 import React, { useRef, useState } from 'react';
-import { Home } from '../../../home/Home';
+import { dec2bin } from '../../../function/binAndDec';
 
 
 function FloatingPointApp() {
-  const [decNum, setDecNum] = useState<number>(0);
+  const [binNum, setBinNum] = useState<number>(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const convertButtonClick = () => {
     if (inputRef.current !== null) {
-      const newValue = parseInt(inputRef.current.value, 10);
+      const newValue = Number(inputRef.current.value);
       if (!isNaN(newValue)) {
-        setDecNum(newValue);
+        setBinNum(dec2bin(newValue));
       }
     }
   }
 
   return (
     <>
-      {decNum}←
       <div style={{ display: 'flex' }}>
         <div style={{ display: 'flex', alignItems: 'flex-end' }}>
           <input type="number" ref={inputRef} />
@@ -31,6 +30,7 @@ function FloatingPointApp() {
       </div>
       <div>
         <p>▼2進数に変換する</p>
+        <div style={{ marginLeft: '10px' }}>{binNum}</div>
       </div>
     </>
   );
