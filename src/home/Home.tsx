@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { SnsArea } from "./SnsArea/SnsArea";
+import { Link } from "react-router-dom";
 
 export interface HomeProps {
   children: ReactNode
@@ -11,7 +12,7 @@ export const Home = ({ children }: HomeProps) => {
       padding: "20px",
     }}>
       <header style={{ fontSize: '40px' }}>
-        情報いっちゃんねる
+        <Link to="/">情報いっちゃんねる</Link>
       </header>
       <div className="main">
         <div style={{
