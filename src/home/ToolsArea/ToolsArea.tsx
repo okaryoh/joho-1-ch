@@ -37,6 +37,11 @@ export const ToolsArea = ({ }: ToolsAreaProps) => {
           thumbnailSize='small'
           isImage={false}
         />
+        <ThumbnailAndText
+          title='データベースの正規化'
+          thumbnailSize='small'
+          isImage={false}
+        />
       </FlexBox>
 
     </>
