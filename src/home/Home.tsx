@@ -14,6 +14,7 @@ export const Home = ({ children }: HomeProps) => {
       <header style={{ fontSize: '40px' }}>
         <Link to="/">情報いっちゃんねる</Link>
       </header>
+      <p style={{ backgroundColor: '#f0f000' }}>現在開発途中です！思った動作にならない場合がございますのでご注意ください！お問い合わせは <a href="https://twitter.com/tohoku_joho_1ch">こちら</a> まで。</p>
       <div className="main">
         <div style={{
           display: 'flex',
