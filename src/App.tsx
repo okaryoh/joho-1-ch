@@ -5,7 +5,6 @@ import { ClassArea } from './home/ClassArea/ClassArea';
 import { Home } from './home/Home';
 import { Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import FloatingPointApp from './Page/Tools/FloatingPointApp/FloatingPointApp';
-import NotFoundApp from './Page/NotFoundApp';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
             </>
           } />
           <Route path="/floatingpoint" element={<FloatingPointApp />} />
-          <Route path="*" element={<NotFoundApp />} />
         </Routes>
       </Home>
     </BrowserRouter>
