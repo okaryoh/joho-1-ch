@@ -25,3 +25,10 @@ export const NumberOfDegits: Story = {
     numberOfDigits: 20
   }
 }
+
+export const ZeroStart: Story = {
+  args: {
+    bin: "0010110",
+    numberOfDigits: 20
+  }
+}

@@ -5,7 +5,7 @@ interface BitProps {
     /**
      * 正規化する2進数の数。
      */
-    bin: number
+    bin: number | string
     /**
      * 桁数。0埋めも行う。
      */
@@ -16,7 +16,8 @@ export const Bit = ({
     bin,
     numberOfDigits,
 }: BitProps) => {
-    const stringBit = numberOfDigits
+    let stringBit = '';
+    stringBit = numberOfDigits
         ? `${bin}${"0".repeat(numberOfDigits)}`.substring(0, numberOfDigits)
         : `${bin}`
     const array = stringBit.split('').map(Number);
