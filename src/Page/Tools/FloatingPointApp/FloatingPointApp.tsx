@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { dec2bin } from '../../../function/binAndDec';
+import { Normalization } from '../../../stories/MathAndInfo/Normalization/Normalization';
 
 
 function FloatingPointApp() {
@@ -31,6 +32,13 @@ function FloatingPointApp() {
       <div>
         <p>▼2進数に変換する</p>
         <div style={{ marginLeft: '10px' }}>{binNum}</div>
+      </div>
+
+      <div>
+        <p>▼正規化する</p>
+        <Normalization bin={binNum} />
+      </div>
+
       </div>
     </>
   );
