@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { FlexBox } from "../../stories/FlexBox/FlexBox";
-import { Paragraph } from "../../stories/Paragraph/Paragraph";
-import { ThumbnailAndText } from "../../stories/ThumbnailAndText/ThumbnailAndText";
+import { FlexBox } from "../../stories/Common/FlexBox/FlexBox";
+import { Paragraph } from "../../stories/Common/Paragraph/Paragraph";
+import { ThumbnailAndText } from "../../stories/Common/ThumbnailAndText/ThumbnailAndText";
 
 export interface ToolsAreaProps {
 }

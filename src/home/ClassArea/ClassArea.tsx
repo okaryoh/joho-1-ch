@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { Paragraph } from "../../stories/Paragraph/Paragraph";
-import { Label } from "../../stories/Label/Label";
+import { Paragraph } from "../../stories/Common/Paragraph/Paragraph";
+import { Label } from "../../stories/Common/Label/Label";
 
 export interface ClassAreaProps {
 }

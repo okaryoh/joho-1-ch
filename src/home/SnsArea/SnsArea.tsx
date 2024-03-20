@@ -1,5 +1,5 @@
 import { ReactNode, useEffect } from "react";
-import { Paragraph } from "../../stories/Paragraph/Paragraph";
+import { Paragraph } from "../../stories/Common/Paragraph/Paragraph";
 
 export interface SnsAreaProps {
 }
