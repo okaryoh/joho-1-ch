@@ -25,7 +25,11 @@ export function convertNormalization(bin: number): NormalizationResult {
     let integer: number = Math.floor(abs);
     let fraction = abs;
     let exponent = 0;
-    const isMinus = abs > 0;
+
+    /** 桁表示を統一するために桁数を準備 */
+    let digit = String(abs).length;
+
+    const isMinus = bin < 0;
     const isLessThanOne = fraction < 1
     const result: Normalize[] = [
         { sign: isMinus, exponent: 0, fraction: abs }
@@ -37,7 +41,10 @@ export function convertNormalization(bin: number): NormalizationResult {
 
         integer = Math.floor(fraction);
 
-        result.push({ sign: isMinus, exponent, fraction })
+        result.push({ sign: isMinus, exponent, fraction: Number(String(fraction).substring(0, digit)) })
+
+        digit = digit - (isLessThanOne ? 1 : 0);
+        console.log(digit)
     }
     return {
         normalizationProcess: result,

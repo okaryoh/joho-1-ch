@@ -27,13 +27,13 @@ export const Minus: Story = {
 
 export const Primary2: Story = {
   args: {
-    bin: 10100.000110
+    bin: 101000.00011
   },
 };
 
 export const Minus2: Story = {
   args: {
-    bin: -10100.000110
+    bin: -101000.00011
   },
 };
 
