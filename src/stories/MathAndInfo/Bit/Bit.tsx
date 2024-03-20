@@ -29,7 +29,8 @@ export const Bit = ({
                     borderBottom: '1px solid #000',
                     borderLeft: index === 0 ? '1px solid #000' : '1px dotted #000',
                     borderRight: index === array.length - 1 ? '1px solid #000' : '',
-                    padding: '0px 5px'
+                    padding: '0px 5px',
+                    backgroundColor: '#ffffff',
                 }}>{bit}</div>
             ))}
         </div>
