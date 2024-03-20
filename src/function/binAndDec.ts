@@ -1,15 +1,18 @@
+import Decimal from "decimal.js";
+
 /**
  * 10進数を2進数に変換
  * @param dec 10進数
  * @returns 
  */
 export function dec2bin(dec: number): number {
-    const result = parseInt(dec.toString(2))
-    let decimal = dec - Math.floor(dec);
+    const decim = new Decimal(Math.abs(dec));
+    const result = parseInt(decim.toString()).toString(2)
+    let decimal = decim.minus(decim.floor());
     let times = 0;
     let decimalBin = '';
 
-    while (decimal != 0) {
+    while (!decimal.equals(0)) {
         if (times === 0) {
             decimalBin += ".";
         }
@@ -22,9 +25,9 @@ export function dec2bin(dec: number): number {
             decimalBin += "1"
             break;
         }
-        decimal = decimal * 2;
-        decimalBin += Math.floor(decimal);
-        decimal = decimal - Math.floor(decimal)
+        decimal = decimal.times(2);
+        decimalBin += decimal.floor();
+        decimal = decimal.minus(decimal.floor());
         times = times + 1;
     }
     return Number(result + decimalBin);
