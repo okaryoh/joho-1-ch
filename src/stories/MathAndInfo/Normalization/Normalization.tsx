@@ -1,3 +1,4 @@
+import Decimal from "decimal.js";
 import { Power } from "../Power/Power";
 
 export type NormalizationResult = {
@@ -21,30 +22,27 @@ export type Normalize = {
  * @returns 
  */
 export function convertNormalization(bin: number): NormalizationResult {
-    const abs = Math.abs(bin);
-    let integer: number = Math.floor(abs);
+    const abs = new Decimal(Math.abs(bin));
+    let integer: Decimal = abs.floor()
     let fraction = abs;
     let exponent = 0;
 
     /** 桁表示を統一するために桁数を準備 */
-    let digit = String(abs).length;
+    // let digit = String(abs).length;
 
     const isMinus = bin < 0;
-    const isLessThanOne = fraction < 1
+    const isLessThanOne = fraction.lessThan(1);
     const result: Normalize[] = [
-        { sign: isMinus, exponent: 0, fraction: abs }
+        { sign: isMinus, exponent: 0, fraction: abs.toNumber() }
     ];
 
-    while (integer != 1) {
-        fraction = isLessThanOne ? fraction * 10 : fraction / 10;
+    while (!integer.equals(1)) {
+        fraction = isLessThanOne ? fraction.times(10) : fraction.dividedBy(10);
         exponent = exponent + (isLessThanOne ? - 1 : 1);
 
-        integer = Math.floor(fraction);
+        integer = fraction.floor();
 
-        result.push({ sign: isMinus, exponent, fraction: Number(String(fraction).substring(0, digit)) })
-
-        digit = digit - (isLessThanOne ? 1 : 0);
-        console.log(digit)
+        result.push({ sign: isMinus, exponent, fraction: fraction.toNumber() })
     }
     return {
         normalizationProcess: result,
@@ -62,6 +60,9 @@ interface NormalizationProps {
 export const Normalization = ({
     bin
 }: NormalizationProps) => {
+    if (bin === 0) {
+        return <></>
+    }
     const normalization = convertNormalization(bin);
     return (
         <div style={{ display: 'flex' }}>
