@@ -50,6 +50,11 @@ export function convertNormalization(bin: number): NormalizationResult {
     };
 }
 
+/** 最終結果だけ */
+export function getFinalNormalization(bin: number): Normalize {
+    return convertNormalization(bin).normalization;
+}
+
 interface NormalizationProps {
     /**
      * 正規化する2進数の数。
