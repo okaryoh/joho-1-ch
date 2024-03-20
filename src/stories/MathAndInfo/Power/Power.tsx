@@ -9,9 +9,6 @@ interface PowerProps {
   exponent: number,
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Power = ({
   base,
   exponent
