@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style.css';
+import { ToolsArea } from './home/ToolsArea/ToolsArea';
+import { ClassArea } from './home/ClassArea/ClassArea';
+import { Home } from './home/Home';
+import { Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import FloatingPointApp from './Page/Tools/FloatingPointApp/FloatingPointApp';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // https://qiita.com/gaia003/items/2be915f3963c3f152727
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Home>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <ToolsArea />
+              <ClassArea />
+            </>
+          } />
+          <Route path="/floatingpoint" element={<FloatingPointApp />} />
+        </Routes>
+      </Home>
+    </BrowserRouter>
   );
 }
 
